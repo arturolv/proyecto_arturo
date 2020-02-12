@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Zona Batalla</title>
+  
+  <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css'>
+<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+  <body class="body1">
+    <div id="juego">
+
+      <div class="row" v-if="jugando">
+        <div class="container">
+
+          <!-- USUARIO -->
+          <div class="col m4 lighten-1 quitar-padding-lateral">
+
+            <!-- Avatar -->
+            <div class="card-image">
+              <img id="img3" src="img/cat.png" >
+            </div>
+
+            <!-- Barras de estado -->
+            <div class="card-content grey lighten-2">
+
+              <!-- Salud -->
+              <i class="fa fa-heartbeat"></i> <span class="right">{{saludUsuario}}/100</span>
+              <div class="progress brown">
+                <div class="determinate red" v-bind:style="{width: saludUsuario + '%'}"></div>
+              </div>
+
+              <!-- Mana -->
+              <i class="fa fa-magic"></i> <span class="right">{{manaUsuario}}/100</span>
+              <div class="progress brown">
+                <div class="determinate blue"  v-bind:style="{width: manaUsuario + '%'}"></div>
+              </div>
+            </div>
+
+            <!-- Barra de acciones -->
+            <div class="card-action barra-ataques brown darken-3">
+              <a class="btn-floating red" @click="normal"><i class="fa fa-bomb"></i></a>
+              <a v-bind:class="[manaUsuario < '10' ? 'disabled' : 'blue', 'btn-floating']" @click="especial"><i class="fa fa-magic"></i></a>
+              <a v-bind:class="[manaUsuario < '15' ? 'disabled' : 'green', 'btn-floating']" @click="curar"><i class="fa fa-plus-square"></i></a>
+              <a class="btn-floating grey" @click="rendirse"><i class="fa fa-flag"></i></a>
+            </div>
+          </div>
+
+          <!-- ENEMIGO -->
+          <div class=" col offset-m4 m4 lighten-1 quitar-padding-lateral">
+
+            <!-- Avatar -->
+            <div class="card-image">
+                
+              <img id="img4" src="img/guerrera.png" >
+            </div>
+
+            <!-- Barras de estado -->
+            <div class="card-content grey lighten-2">
+
+              <!-- Salud -->
+              <i class="fa fa-heartbeat"></i> <span class="right">{{saludEnemigo}}/100</span>
+              <div class="progress brown">
+                <div class="determinate red" v-bind:style="{width: saludEnemigo + '%'}"></div>
+              </div>
+
+              <!-- Mana -->
+              <i class="fa fa-magic"></i> <span class="right">{{manaEnemigo}}/100</span>
+              <div class="progress brown">
+                <div class="determinate blue"  v-bind:style="{width: manaEnemigo + '%'}"></div>
+              </div>
+
+            </div>
+
+          </div> <!-- Enemigo -->
+        </div> <!-- container  -->
+      </div> <!-- Jugando -->
+
+      <!-- Fin del juego -->
+      <div v-else="jugando" class="center-align">
+        <a href="index.html" class="yellow-text mensaje-final" >
+          ¡{{mensaje}}!
+          <h6 class="yellow-text">Click para volver a jugar</h6>
+        </a>
+      </div>
+
+    </div> <!-- div # juego -->
+
+
+
+  </body>
+</html>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.min.js'></script>
+
+  
+
+    <script  src="js/index1.js"></script>
+
+
+
+
+</body>
+
+</html>
