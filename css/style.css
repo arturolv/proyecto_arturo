@@ -1,0 +1,108 @@
+
+.body1 {
+    background: url("../img/fondo1.gif") no-repeat center top;
+    background-size:100% 100%;
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .body2 {
+    background: url("https://i.imgur.com/gkKviRB.gif") no-repeat center top;
+    background-size:100% 100%;
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .body3 {
+    background: url("../img/fondo3.jpg") no-repeat center top;
+    align-items: center;
+    font-style: oblique;
+    color: #F4F71F;
+  }
+  .container {
+    width: 700px;
+    height: 300px;
+  }
+  .barra-ataques {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .quitar-padding-lateral {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  
+  .mensaje-final {
+    font-size: 10em;
+  }
+  
+  .girar-imagen {
+    transform: scaleX(-1);
+    filter: FlipH;
+  }
+  @keyframes rotate {from {transform: rotateY(180deg);}
+  to {transform: rotateY(540deg);}}
+
+#img{
+    -webkit-animation: 6s rotate linear infinite;
+    
+    
+}
+#img {
+     -webkit-animation-direction: reverse;
+     animation-direction: reverse;
+     padding: 50px;
+} 
+    
+  #img1 {
+    width: 400px;
+    height: 600px;
+    margin-left: -60px;
+  }
+  #img2 {
+    width: 400px;
+    height: 600px;
+    margin-left: -120px;
+  }
+  #img3{
+    width: 450px;
+    height: 650px;
+    margin-left: -100px;
+    margin-top: -50px;
+  }
+  #img4 {
+    width: 550px;
+    height: 650px;
+    margin-left: -175px;
+    margin-top: -50px;
+  }
+  #titulo1 {
+    text-align: center;
+    font-size: 100;
+    margin-top: -180;
+  }
+  #titulo2 {
+    text-align: center;
+    margin-top: 150px;
+  }
+  #boton {
+    margin-top: 50px;
+    margin-left: 45%;
+  }
+  #mago{
+    margin-top: 50px;
+    margin-left: 630px;
+  }
+  #gato {
+    margin-top: 50px;
+    margin-left: 100px;
+  }
+  
